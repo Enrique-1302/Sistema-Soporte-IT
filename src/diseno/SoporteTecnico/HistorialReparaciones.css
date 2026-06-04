@@ -1,0 +1,398 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #0f172a;
+  color: #e2e8f0;
+}
+
+.reparaciones-container {
+  padding: 24px;
+}
+
+.reparaciones-header {
+  margin-bottom: 24px;
+}
+
+.reparaciones-header h1 {
+  margin: 0;
+  font-size: 28px;
+  font-weight: 700;
+  color: #f8fafc;
+}
+
+.reparaciones-header p {
+  margin-top: 8px;
+  color: #94a3b8;
+  font-size: 14px;
+}
+
+.reparaciones-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.reparacion-card {
+  background: #111827;
+  border: 1px solid #1e293b;
+  border-radius: 18px;
+  padding: 20px;
+  box-shadow: 0 10px 25px rgba(0,0,0,.25);
+}
+
+.reparacion-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 18px;
+}
+
+.reparacion-top h3 {
+  margin: 0 0 10px;
+  color: #f8fafc;
+}
+
+.reparacion-top p {
+  margin: 4px 0;
+  color: #cbd5e1;
+  font-size: 14px;
+}
+
+.equipos-listado {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 14px;
+}
+
+.equipo-item {
+  background: #1e293b;
+  border-radius: 12px;
+  padding: 14px 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.equipo-item strong {
+  display: block;
+  color: #f8fafc;
+  margin-bottom: 4px;
+}
+
+.equipo-item p {
+  margin: 0;
+  color: #94a3b8;
+  font-size: 13px;
+}
+
+.equipo-item span {
+  background: #334155;
+  color: #f8fafc;
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.historial-tabla-contenedor {
+  width: 100%;
+  overflow-x: auto;
+  background: #111827;
+  border: 1px solid #1e293b;
+  border-radius: 18px;
+  box-shadow: 0 10px 25px rgba(0,0,0,.25);
+}
+
+.historial-tabla {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 1000px;
+}
+
+.historial-tabla th {
+  text-align: left;
+  padding: 14px 16px;
+  background: #1e293b;
+  color: #f8fafc;
+  font-size: 13px;
+}
+
+.historial-tabla td {
+  padding: 14px 16px;
+  border-top: 1px solid #1e293b;
+  color: #cbd5e1;
+  font-size: 13px;
+  vertical-align: top;
+}
+
+.historial-equipo {
+  margin-bottom: 8px;
+}
+
+.historial-equipo strong {
+  display: block;
+  color: #f8fafc;
+}
+
+.historial-equipo small,
+.historial-comentario small {
+  display: block;
+  margin-top: 4px;
+  color: #94a3b8;
+}
+
+.historial-comentario p {
+  margin: 0;
+  color: #e2e8f0;
+}
+
+/*.estado-badge {
+  display: inline-block;
+  padding: 6px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 700;
+}*/
+
+.estado-3 {
+  background: rgba(245, 158, 11, 0.15);
+  color: #fbbf24;
+}
+
+.estado-4 {
+  background: rgba(34, 197, 94, 0.15);
+  color: #4ade80;
+}
+
+.estado-5 {
+  background: rgba(148, 163, 184, 0.15);
+  color: #cbd5e1;
+}
+
+.estado-6 {
+  background: rgba(239, 68, 68, 0.15);
+  color: #f87171;
+}
+
+.btn-entregar {
+  border: none;
+  border-radius: 10px;
+  padding: 8px 12px;
+  background: rgba(34, 197, 94, 0.18);
+  color: #4ade80;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.btn-entregar:hover {
+  background: rgba(34, 197, 94, 0.28);
+}
+
+.btn-entregar {
+  border: none;
+  border-radius: 10px;
+  padding: 8px 14px;
+  background: rgba(34, 197, 94, 0.18);
+  color: #4ade80;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all .2s ease;
+}
+
+.btn-entregar:hover {
+  background: rgba(34, 197, 94, 0.28);
+  transform: translateY(-1px);
+}
+
+.btn-entregar:active {
+  transform: scale(0.98);
+}
+
+/* =========================
+   FILTROS
+========================= */
+
+.historial-filtros{
+  display:flex;
+  gap:14px;
+  margin-bottom:24px;
+  flex-wrap:wrap;
+  align-items:center;
+}
+
+.historial-filtros input,
+.historial-filtros select{
+  background:#111827;
+  color:#f8fafc;
+  border:1px solid #334155;
+  padding:12px 16px;
+  border-radius:12px;
+  min-width:220px;
+  outline:none;
+  transition:.2s ease;
+  font-size:14px;
+}
+
+.historial-filtros input::placeholder{
+  color:#94a3b8;
+}
+
+.historial-filtros input:focus,
+.historial-filtros select:focus{
+  border-color:#3b82f6;
+  box-shadow:0 0 0 3px rgba(59,130,246,.15);
+}
+
+/* =========================
+   TABLA
+========================= */
+
+.historial-tabla-contenedor{
+  width:100%;
+  max-height:70vh;
+  overflow-y:auto;
+  overflow-x:auto;
+  border-radius:18px;
+}
+
+.historial-filtros{
+  display:flex;
+  gap:14px;
+  margin-bottom:24px;
+  flex-wrap:wrap;
+  align-items:center;
+  background:#0f172a;
+}
+
+.historial-tabla thead th{
+  position:sticky;
+  top:0;
+  z-index:10;
+  background:#1e293b;
+}
+
+.historial-tabla{
+  width:100%;
+  border-collapse:collapse;
+  min-width:1100px;
+}
+
+.historial-tabla thead{
+  background:#1e293b;
+}
+
+.historial-tabla th{
+  text-align:left;
+  padding:16px;
+  color:#f8fafc;
+  font-size:13px;
+  font-weight:700;
+  border-bottom:1px solid #334155;
+}
+
+.historial-tabla td{
+  padding:16px;
+  border-top:1px solid #1e293b;
+  color:#cbd5e1;
+  vertical-align:top;
+  font-size:13px;
+}
+
+.historial-tabla tbody tr{
+  transition:.2s ease;
+}
+
+.historial-tabla tbody tr:hover{
+  background:#172033;
+}
+
+/* =========================
+   EQUIPOS
+========================= */
+
+.historial-equipo{
+  background:#1e293b;
+  border:1px solid #334155;
+  border-radius:12px;
+  padding:10px 12px;
+  margin-bottom:8px;
+}
+
+.historial-equipo strong{
+  display:block;
+  color:#f8fafc;
+  margin-bottom:4px;
+}
+
+.historial-equipo small{
+  color:#94a3b8;
+}
+
+/* =========================
+   ESTADOS
+========================= */
+
+.estado{
+  display:inline-flex;
+  align-items:center;
+  padding:6px 12px;
+  border-radius:999px;
+  font-size:12px;
+  font-weight:700;
+}
+
+.estado-1{
+  background:rgba(250,204,21,.15);
+  color:#fde047;
+}
+
+.estado-2{
+  background:rgba(59,130,246,.15);
+  color:#60a5fa;
+}
+
+.estado-3{
+  background:rgba(249,115,22,.15);
+  color:#fb923c;
+}
+
+.estado-4{
+  background:rgba(34,197,94,.15);
+  color:#4ade80;
+}
+
+.estado-5{
+  background:rgba(148,163,184,.15);
+  color:#cbd5e1;
+}
+
+.estado-6{
+  background:rgba(239,68,68,.15);
+  color:#f87171;
+}
+
+.estado-7{
+  background:rgba(100,116,139,.15);
+  color:#94a3b8;
+}
+
+/* =========================
+   BOTONES
+========================= */
+
+.btn-detalle{
+  border:none;
+  border-radius:10px;
+  padding:9px 14px;
+  background:#2563eb;
+  color:white;
+  font-weight:700;
+  cursor:pointer;
+  transition:.2s ease;
+}
+
+.btn-detalle:hover{
+  background:#1d4ed8;
+  transform:translateY(-1px);
+}

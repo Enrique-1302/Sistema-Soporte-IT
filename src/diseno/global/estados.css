@@ -1,0 +1,41 @@
+/* 1 Pendiente */
+.estado-1 {
+  background: #fff3cd;
+  color: #856404;
+}
+
+/* 2 En reparación */
+.estado-2 {
+  background: #dbeafe;
+  color: #1d4ed8;
+}
+
+/* 3 Pendiente de repuesto */
+.estado-3 {
+  background: #ffedd5;
+  color: #c2410c;
+}
+
+/* 4 Reparado */
+.estado-4 {
+  background: #dcfce7;
+  color: #166534;
+}
+
+/* 5 Entregado */
+.estado-5 {
+  background: #e5e7eb;
+  color: #374151;
+}
+
+/* 6 Cancelado */
+.estado-6 {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+/* 7 Sin reparación */
+.estado-7 {
+  background: #111827;
+  color: #f9fafb;
+}

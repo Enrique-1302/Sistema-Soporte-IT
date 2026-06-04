@@ -1,0 +1,116 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #0f172a;
+  color: #e2e8f0;
+}
+
+.reparaciones-container {
+  padding: 24px;
+}
+
+.reparaciones-header {
+  margin-bottom: 24px;
+}
+
+.reparaciones-header h1 {
+  margin: 0;
+  font-size: 28px;
+  font-weight: 700;
+  color: #f8fafc;
+}
+
+.reparaciones-header p {
+  margin-top: 8px;
+  color: #94a3b8;
+  font-size: 14px;
+}
+
+.reparaciones-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.reparacion-card {
+  background: #111827;
+  border: 1px solid #1e293b;
+  border-radius: 18px;
+  padding: 20px;
+  box-shadow: 0 10px 25px rgba(0,0,0,.25);
+}
+
+.reparacion-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 18px;
+}
+
+.reparacion-top h3 {
+  margin: 0 0 10px;
+  color: #f8fafc;
+}
+
+.reparacion-top p {
+  margin: 4px 0;
+  color: #cbd5e1;
+  font-size: 14px;
+}
+
+.equipos-listado {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 14px;
+}
+
+.equipo-item {
+  background: #1e293b;
+  border-radius: 12px;
+  padding: 14px 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.equipo-item strong {
+  display: block;
+  color: #f8fafc;
+  margin-bottom: 4px;
+}
+
+.equipo-item p {
+  margin: 0;
+  color: #94a3b8;
+  font-size: 13px;
+}
+
+.equipo-item span {
+  background: #334155;
+  color: #f8fafc;
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.comentario-tecnico {
+  margin-top: 18px;
+  background: rgba(245, 158, 11, 0.08);
+  border: 1px solid rgba(245, 158, 11, 0.2);
+  padding: 16px;
+  border-radius: 14px;
+}
+
+.comentario-tecnico strong {
+  display: block;
+  margin-bottom: 10px;
+  color: #fbbf24;
+}
+
+.comentario-tecnico p {
+  margin: 0;
+  color: #e2e8f0;
+  line-height: 1.5;
+}

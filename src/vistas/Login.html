@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Soporte IT - Iniciar Sesión</title>
+  <link rel="stylesheet" href="../diseno/Login.css">
+</head>
+<body>
+  <div class="login-wrapper">
+
+    <img src="../Imagenes/LogoIT.png" alt="Logo IT" class="logo">
+
+    <div class="login-card">
+      <h2>Bienvenido</h2>
+      <p class="subtitulo">Ingresa tu DPI para continuar</p>
+
+      <form id="formLogin">
+        <div class="form-group">
+          <label for="dpi">DPI</label>
+          <input
+            type="text"
+            id="dpi"
+            name="dpi"
+            placeholder="0000 00000 0000"
+            maxlength="15"
+            autocomplete="off"
+            required
+          >
+        </div>
+        <p class="mensaje-error" id="mensajeError"></p>
+        <button id="btnLogin" type="submit">
+          Ingresar
+        </button>
+      </form>
+    </div>
+
+  </div>
+  <script src="../logica/Login.js"></script>
+</body>
+</html>

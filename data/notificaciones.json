@@ -1,0 +1,51 @@
+[
+  {
+    "id": 3,
+    "titulo": "Reparacion pendiente de repuesto",
+    "mensaje": "Tu reparacion #18 cambio a Pendiente de repuesto.",
+    "tipo": "estado",
+    "url": "misSolicitudes",
+    "idDestinatario": 1312,
+    "rolDestinatario": null,
+    "creadaEn": "2026-05-25T23:51:41.970Z",
+    "toastPara": [],
+    "mostradaA": [],
+    "leidaPor": [
+      1312
+    ]
+  },
+  {
+    "id": 2,
+    "titulo": "Reparacion iniciada",
+    "mensaje": "Soporte inicio tu reparacion #18.",
+    "tipo": "estado",
+    "url": "misSolicitudes",
+    "idDestinatario": 1312,
+    "rolDestinatario": null,
+    "creadaEn": "2026-05-25T23:49:13.334Z",
+    "toastPara": [],
+    "mostradaA": [],
+    "leidaPor": [
+      1312
+    ]
+  },
+  {
+    "id": 1,
+    "titulo": "Nuevo reporte de equipo",
+    "mensaje": "Ana Curán creo el reporte #18.",
+    "tipo": "reporte",
+    "url": "cola",
+    "idDestinatario": null,
+    "rolDestinatario": "soporte",
+    "creadaEn": "2026-05-25T23:45:23.678Z",
+    "toastPara": [
+      7
+    ],
+    "mostradaA": [
+      7
+    ],
+    "leidaPor": [
+      68
+    ]
+  }
+]

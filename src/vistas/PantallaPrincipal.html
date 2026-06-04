@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Soporte IT - Panel Principal</title>
+
+  <link rel="stylesheet" href="/diseno/PantallaPrincipal.css">
+  <link rel="stylesheet" href="/diseno/Reportar/Equipo.css">
+  <link rel="stylesheet" href="/diseno/Reportar/MisSolicitudes.css">
+  <link rel="stylesheet" href="/diseno/SoporteTecnico/ColaReparacion.css">
+  <link rel="stylesheet" href="/diseno/SoporteTecnico/ReparacionesProceso.css">
+  <link rel="stylesheet" href="/diseno/SoporteTecnico/PendienteRepuesto.css">
+  <link rel="stylesheet" href="/diseno/SoporteTecnico/HistorialReparaciones.css">
+  <link rel="stylesheet" href="/diseno/SoporteTecnico/DetalleReparacion.css">
+</head>
+
+<body>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-logo">
+      <div class="logo-glow"></div>
+
+      <img
+        src="/Imagenes/LogoIT.png"
+        alt="Logo IT"
+        class="logo"
+      >
+
+      <span class="logo-texto">
+        Soporte IT
+      </span>
+    </div>
+
+    <nav class="sidebar-nav">
+
+      <ul>
+
+        <!-- INICIO -->
+        <li class="nav-item">
+          <button
+            class="nav-btn"
+            onclick="mostrarInicio()"
+          >
+            <svg
+              class="nav-icon"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+              <polyline points="9 22 9 12 15 12 15 22"/>
+            </svg>
+
+            <span>Inicio</span>
+          </button>
+        </li>
+
+        <!-- REPORTAR -->
+        <li class="nav-item has-submenu">
+
+          <button
+            class="nav-btn"
+            onclick="toggleSubmenu('submenuReportar', this)"
+          >
+            <svg
+              class="nav-icon"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path d="M9 17H7A5 5 0 0 1 7 7h2"/>
+              <path d="M15 7h2a5 5 0 1 1 0 10h-2"/>
+              <line x1="8" y1="12" x2="16" y2="12"/>
+            </svg>
+
+            <span>Reportar</span>
+
+            <svg
+              class="chevron"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <polyline points="6 9 12 15 18 9"/>
+            </svg>
+          </button>
+
+          <ul class="submenu" id="submenuReportar">
+
+            <!-- EQUIPO -->
+            <li>
+              <button
+                class="submenu-btn"
+                data-vista="equipo"
+                onclick="abrirVista('equipo', event)"
+              >
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <rect x="2" y="3" width="20" height="14" rx="2"/>
+                  <line x1="8" y1="21" x2="16" y2="21"/>
+                  <line x1="12" y1="17" x2="12" y2="21"/>
+                </svg>
+
+                Equipo
+              </button>
+            </li>
+
+            <!-- MIS SOLICITUDES -->
+            <li>
+              <button
+                class="submenu-btn"
+                data-vista="misSolicitudes"
+                onclick="abrirVista('misSolicitudes', event)"
+              >
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path d="M9 11l3 3L22 4"/>
+                  <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/>
+                </svg>
+
+                Mis solicitudes
+              </button>
+            </li>
+
+          </ul>
+        </li>
+
+        <li class="nav-separador"></li>
+
+        <!-- SOPORTE TECNICO -->
+        <li
+          class="nav-item has-submenu"
+          id="menuSoporteTecnico"
+        >
+
+          <button
+            class="nav-btn"
+            onclick="toggleSubmenu('submenuSoporte', this)"
+          >
+            <svg
+              class="nav-icon"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
+            </svg>
+
+            <span>Soporte Técnico</span>
+
+            <svg
+              class="chevron"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <polyline points="6 9 12 15 18 9"/>
+            </svg>
+          </button>
+
+          <ul class="submenu" id="submenuSoporte">
+
+            <li>
+              <button
+                class="submenu-btn"
+                data-vista="cola"
+                onclick="abrirVista('cola', event)"
+              >
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <line x1="8" y1="6" x2="21" y2="6"/>
+                  <line x1="8" y1="12" x2="21" y2="12"/>
+                  <line x1="8" y1="18" x2="21" y2="18"/>
+                  <line x1="3" y1="6" x2="3.01" y2="6"/>
+                  <line x1="3" y1="12" x2="3.01" y2="12"/>
+                  <line x1="3" y1="18" x2="3.01" y2="18"/>
+                </svg>
+
+                Cola de Reparaciones
+              </button>
+            </li>
+
+            <li>
+              <button
+                class="submenu-btn"
+                data-vista="enProceso"
+                onclick="abrirVista('enProceso', event)"
+              >
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="10"/>
+                  <path d="M12 6v6l4 2"/>
+                </svg>
+                En reparación
+              </button>
+            </li>
+
+            <li>
+              <button
+                class="submenu-btn"
+                data-vista="pendienteRepuesto"
+                onclick="abrirVista('pendienteRepuesto', event)"
+              >
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
+                  <path d="M3.3 7L12 12l8.7-5"/>
+                  <path d="M12 22V12"/>
+                </svg>
+                Pendientes de repuesto
+              </button>
+            </li>
+
+            <li>
+              <button
+                class="submenu-btn"
+                data-vista="historialReparaciones"
+                onclick="abrirVista('historialReparaciones', event)"
+              >
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M3 3v5h5"/>
+                  <path d="M3.05 13A9 9 0 1 0 6 5.3L3 8"/>
+                  <path d="M12 7v5l3 2"/>
+                </svg>
+                Historial de reparaciones
+              </button>
+            </li>
+
+          </ul>
+        </li>
+
+      </ul>
+
+    </nav>
+
+    <!-- USUARIO -->
+    <div class="sidebar-usuario" id="infoUsuario">
+
+      <div class="usuario-avatar" id="usuarioAvatar">
+        ?
+      </div>
+
+      <div class="usuario-info">
+
+        <span
+          class="usuario-nombre"
+          id="usuarioNombre"
+        >
+          Cargando...
+        </span>
+
+        <span
+          class="usuario-puesto"
+          id="usuarioPuesto"
+        >
+        </span>
+
+      </div>
+
+      <button
+        class="notificaciones-btn"
+        id="btnNotificaciones"
+        type="button"
+        title="Notificaciones"
+        aria-label="Notificaciones"
+      >
+        <svg
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+        >
+          <path d="M18 8a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9"/>
+          <path d="M13.73 21a2 2 0 0 1-3.46 0"/>
+        </svg>
+
+        <span
+          class="notificaciones-badge"
+          id="notificacionesBadge"
+          hidden
+        >
+          0
+        </span>
+      </button>
+
+      <button
+        class="salir-btn"
+        id="btnSalir"
+        type="button"
+        title="Salir"
+        aria-label="Salir"
+      >
+        <svg
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+        >
+          <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/>
+          <polyline points="16 17 21 12 16 7"/>
+          <line x1="21" y1="12" x2="9" y2="12"/>
+        </svg>
+      </button>
+
+    </div>
+
+  </aside>
+
+  <!-- CONTENIDO -->
+  <main class="contenido">
+
+    <div class="bienvenida" id="bienvenida">
+
+      <div class="bienvenida-icono">
+
+        <svg
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.5"
+        >
+          <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+          <polyline points="9 22 9 12 15 12 15 22"/>
+        </svg>
+
+      </div>
+
+      <h1>Bienvenido al Sistema</h1>
+
+      <p>
+        Selecciona una opción del menú para comenzar
+      </p>
+
+    </div>
+
+  </main>
+
+  <div
+    class="toast-stack"
+    id="toastStack"
+    aria-live="polite"
+    aria-atomic="true"
+  ></div>
+
+  <aside
+    class="notificaciones-panel"
+    id="notificacionesPanel"
+    aria-hidden="true"
+  >
+    <div class="notificaciones-header">
+      <div>
+        <h2>Notificaciones</h2>
+        <p>Actividad reciente</p>
+      </div>
+
+      <button
+        class="notificaciones-cerrar"
+        id="cerrarNotificaciones"
+        type="button"
+        aria-label="Cerrar notificaciones"
+      >
+        x
+      </button>
+    </div>
+
+    <div
+      class="notificaciones-lista"
+      id="notificacionesLista"
+    ></div>
+  </aside>
+
+  <script src="/logica/PantallaPrincipal.js"></script>
+
+</body>
+</html>

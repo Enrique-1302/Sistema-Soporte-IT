@@ -1,0 +1,379 @@
+@keyframes fadeInVista {
+  from { opacity: 0; transform: translateY(12px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in {
+  animation: fadeInVista 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.equipo-contenedor {
+  width: 100%;
+  max-width: 860px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* ── HEADER ── */
+.equipo-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.equipo-header svg {
+  width: 28px;
+  height: 28px;
+  stroke: #58a6ff;
+}
+
+.equipo-header h2 {
+  font-size: 20px;
+  font-weight: 700;
+  color: #e6edf3;
+}
+
+/* ── BUSCADOR ── */
+.buscar-seccion {
+  position: relative;
+}
+
+.buscar-wrap {
+  position: relative;
+}
+
+.buscar-icono {
+  position: absolute;
+  left: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 18px;
+  height: 18px;
+  stroke: #484f58;
+  pointer-events: none;
+  z-index: 1;
+}
+
+#inputBuscar {
+  width: 100%;
+  padding: 13px 16px 13px 44px;
+  background: #161b22;
+  border: 1.5px solid #21262d;
+  border-radius: 10px;
+  color: #e6edf3;
+  font-size: 14px;
+  font-family: inherit;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+#inputBuscar:focus {
+  border-color: #388bfd;
+  box-shadow: 0 0 0 3px rgba(56,139,253,0.12);
+}
+
+#inputBuscar::placeholder {
+  color: #484f58;
+}
+
+/* ── SUGERENCIAS ── */
+.sugerencias-lista {
+  display: none;
+  position: absolute;
+  top: calc(100% + 6px);
+  left: 0;
+  right: 0;
+  background: #161b22;
+  border: 1px solid #30363d;
+  border-radius: 10px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.5);
+  z-index: 100;
+  overflow: hidden;
+  max-height: 240px;
+  overflow-y: auto;
+}
+
+.sugerencia-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 11px 16px;
+  cursor: pointer;
+  transition: background 0.15s;
+  border-bottom: 1px solid #21262d;
+}
+
+.sugerencia-item:last-child {
+  border-bottom: none;
+}
+
+.sugerencia-item:hover {
+  background: #21262d;
+}
+
+.sug-descripcion {
+  font-size: 14px;
+  color: #e6edf3;
+}
+
+.sug-upc {
+  font-size: 12px;
+  color: #6e7681;
+  font-family: monospace;
+}
+
+.sugerencia-vacia {
+  padding: 14px 16px;
+  color: #6e7681;
+  font-size: 13px;
+  text-align: center;
+}
+
+/* ── TABLA ── */
+.lista-seccion {
+  border: 1px solid #21262d;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.equipo-tabla {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.equipo-tabla thead tr {
+  background: #161b22;
+  border-bottom: 1px solid #21262d;
+}
+
+.equipo-tabla th {
+  padding: 11px 16px;
+  text-align: left;
+  font-size: 12px;
+  font-weight: 600;
+  color: #6e7681;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.equipo-tabla td {
+  padding: 12px 16px;
+  font-size: 14px;
+  color: #c9d1d9;
+  border-bottom: 1px solid #161b22;
+  background: #0d1117;
+}
+
+.fila-equipo:last-child td {
+  border-bottom: none;
+}
+
+.fila-vacia td {
+  border-bottom: none;
+  background: #0d1117;
+  padding: 40px 16px;
+  text-align: center;
+  color: #30363d;
+  font-size: 14px;
+}
+
+.fila-vacia svg {
+  display: block;
+  margin: 0 auto 12px;
+  width: 32px;
+  height: 32px;
+  stroke: #21262d;
+}
+
+.td-descripcion {
+  font-weight: 500;
+  color: #e6edf3 !important;
+}
+
+.td-upc {
+  font-family: monospace;
+  font-size: 13px !important;
+  color: #6e7681 !important;
+}
+
+/* ── CONTROL CANTIDAD ── */
+.cantidad-control {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.cantidad-control button {
+  width: 28px;
+  height: 28px;
+  background: #21262d;
+  border: 1px solid #30363d;
+  border-radius: 6px;
+  color: #c9d1d9;
+  font-size: 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.15s, color 0.15s;
+  line-height: 1;
+}
+
+.cantidad-control button:hover {
+  background: #388bfd;
+  border-color: #388bfd;
+  color: white;
+}
+
+.cantidad-control input {
+  width: 52px;
+  padding: 5px 8px;
+  background: #161b22;
+  border: 1px solid #30363d;
+  border-radius: 6px;
+  color: #e6edf3;
+  font-size: 14px;
+  text-align: center;
+  outline: none;
+  font-family: inherit;
+}
+
+.cantidad-control input:focus {
+  border-color: #388bfd;
+}
+
+/* ── ELIMINAR ── */
+.btn-eliminar {
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: 6px;
+  padding: 6px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.15s, border-color 0.15s;
+}
+
+.btn-eliminar svg {
+  width: 16px;
+  height: 16px;
+  stroke: #484f58;
+  transition: stroke 0.15s;
+}
+
+.btn-eliminar:hover {
+  background: rgba(248,81,73,0.1);
+  border-color: rgba(248,81,73,0.3);
+}
+
+.btn-eliminar:hover svg {
+  stroke: #f85149;
+}
+
+/* ── OBSERVACIONES ── */
+.obs-seccion {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.obs-seccion label {
+  font-size: 12px;
+  font-weight: 600;
+  color: #8b949e;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+#observaciones {
+  width: 100%;
+  padding: 12px 14px;
+  background: #161b22;
+  border: 1.5px solid #21262d;
+  border-radius: 10px;
+  color: #e6edf3;
+  font-size: 14px;
+  font-family: inherit;
+  resize: vertical;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  line-height: 1.6;
+}
+
+#observaciones::placeholder {
+  color: #484f58;
+}
+
+#observaciones:focus {
+  border-color: #388bfd;
+  box-shadow: 0 0 0 3px rgba(56,139,253,0.12);
+}
+
+.obs-footer {
+  display: flex;
+  justify-content: flex-end;
+}
+
+#obsContador {
+  font-size: 12px;
+  color: #484f58;
+  transition: color 0.2s;
+}
+
+#obsContador.casi-lleno {
+  color: #d29922;
+}
+
+#obsContador.lleno {
+  color: #f85149;
+}
+
+/* ── BOTÓN GENERAR ── */
+.acciones-seccion {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 16px;
+}
+
+.msg-exito {
+  font-size: 13px;
+  color: #3fb950;
+}
+
+.msg-error {
+  font-size: 13px;
+  color: #f85149;
+}
+
+.btn-reporte {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 24px;
+  background: linear-gradient(135deg, #238636, #2ea043);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 700;
+  font-family: inherit;
+  cursor: pointer;
+  transition: opacity 0.2s, transform 0.1s;
+  box-shadow: 0 4px 14px rgba(35,134,54,0.35);
+}
+
+.btn-reporte svg {
+  width: 16px;
+  height: 16px;
+}
+
+.btn-reporte:hover {
+  opacity: 0.9;
+}
+
+.btn-reporte:active {
+  transform: scale(0.98);
+}
