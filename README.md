@@ -2,7 +2,7 @@
 
 Sistema web desarrollado para la gestión y seguimiento de reparaciones de equipos tecnológicos.
 
-Características
+##Características
 * Registro de solicitudes de reparación.
 * Control de estados de reparación.
 * Historial de comentarios técnicos.
@@ -11,14 +11,14 @@ Características
 * Seguimiento de incidencias.
 * Notificaciones a usuario por estado de reparación
 
-Tecnologías Utilizadas
+## Tecnologías Utilizadas
 * Node.js
 * JavaScript
 * MySQL
 * HTML
 * CSS
 
-Funcionalidades Implementadas
+## Funcionalidades Implementadas
 * API REST para gestión de reparaciones.
 * Historial detallado de cambios de estado.
 * Comentarios técnicos por reparación.
